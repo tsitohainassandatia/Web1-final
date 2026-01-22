@@ -1,0 +1,760 @@
+/*Importations*/
+/*Italianno*/
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+/*Courgette*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/*Nunito*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/*Configuration de base*/
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--paragraphs-font);
+}
+body{
+    background-color: var(--background-color);
+    background: linear-gradient(-60deg,
+            #010F1E 80%,
+            #011627 100%);
+}
+:root {
+    /*couleurs*/
+    --primary-color: #011627;
+    /*Couleur de la navbar et des divs*/
+    --light-color: #00c2cb;
+    /*Couleur utilisee pour les effets de lumiere*/
+    --background-color: #010B19;
+    /*Couleur de fond*/
+    --blue-color: #52cdfe;
+
+    /*Police*/
+    --title-font: Courgette;
+    /*Police pour les titres dans main*/
+    --paragraphs-font: Nunito;
+    /*Police pour les textes de paragraphe*/
+}
+
+body {
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Barre de navigation*/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-end: 3vw;
+    background-color: var(--primary-color);
+    z-index: 10;
+    position: sticky;
+    top: 0vh;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3vw;
+}
+
+header img {
+    width: 6vw;
+}
+
+header div h2 {
+    font-family: Italianno;
+    font-size: 8vh;
+    color: white;
+    letter-spacing: 0.3rem;
+}
+
+header span {
+    color: var(--light-color);
+    font-family: var(--title-font);
+    text-shadow: 0px 0px 10px #00c2cb, 0px 0px 20px #00c2cb;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3vw;
+    list-style: none;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.active {
+    text-decoration: none;
+    color: #00c2cb;
+    text-shadow: 0px 0px 10px #00c2cb, 0px 0px 20px #00c2cb;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vh;
+}
+
+.active hr {
+    opacity: 1;
+    width: 100%;
+    color: #00c2cb;
+    text-shadow: 0px 0px 10px #00c2cb, 0px 0px 20px #00c2cb;
+}
+
+header hr {
+    border-radius: 3px;
+    border: solid 1.5px #00c2cb;
+    width: 0;
+    opacity: 0;
+    transition: all 0.3s;
+    place-self: center;
+}
+
+li h3 {
+    font-family: sans-serif;
+    font-size: 3vh;
+    transition: all 0.3s;
+}
+
+li:hover hr {
+    opacity: 1;
+    width: 100%;
+}
+
+li:hover h3 {
+    color: #00c2cb;
+    text-shadow: 0px 0px 10px #00c2cb, 0px 0px 20px #00c2cb;
+}
+
+
+/*Receiption*/
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+
+}
+
+.obscuringVeil {
+    z-index: 2;
+    background-color: #010f1ebe;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#receipt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5vh;
+    gap: 10vh;
+    margin-top: 2vw;
+    padding-block-end: 6vw;
+}
+
+#receipt::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            #00000000 80%,
+            #010F1E 100%);
+    pointer-events: none;
+}
+
+#receipt p {
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 8vh;
+    text-align: center;
+}
+
+h1 {
+    color: #52cdfe;
+    position: relative;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #00c2cb;
+    text-shadow: 0px 0px 10px #00c2cb, 0px 0px 20px #00c2cb;
+    margin: 3px;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 1vh;
+    font-size: 15vh;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    top: 55%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #00c2cb;
+    transform: perspective(100px) rotateX(7deg) scale(0.6, 0.2);
+    filter: blur(0.5em);
+    opacity: 0.5;
+}
+
+#receipt section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5vw;
+}
+
+#receipt section button {
+    border: solid var(--blue-color);
+    padding-block: 1vh;
+    padding-inline: 3vh;
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--blue-color);
+    font-size: 5vh;
+    font: bold;
+    transition: all 0.3s;
+}
+
+#receipt section button:hover {
+    border: solid #00c2cb;
+    box-shadow: 0px 0px 10px #00c2cb, 0px 0px 20px #00c2cb;
+    background-color: #00c2cb;
+    color: #011627;
+}
+
+
+/*Footer*/
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+}
+
+footer section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5vh;
+    color: white;
+}
+
+footer h4 {
+    font-family: var(--title-font);
+    color: var(--light-color);
+    text-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+    font-size: 4vh;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    color: white;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer p:hover a {
+    color: var(--light-color);
+}
+
+footer a:hover {
+    color: var(--light-color);
+}
+
+/*Who Are We*/
+#whoAreWe {
+    width: 100%;
+    padding-top: 10vh;
+    background: linear-gradient(to bottom,
+            #010b1900 0%,
+            #010F1E 50%);
+    color: white;
+    
+}
+
+/*Form*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+main p{
+    color: white;
+}
+main h2{
+    color: #00c2cb;
+    text-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+    font-family: var(--title-font);
+    font-size: 3.5vw;
+    width: 60vw;
+    text-align: center;
+}
+form {
+    margin-block: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+    border: solid red;
+}
+
+.nom_prenom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 2vh;
+}
+
+form section {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 100%;
+    text-align: center;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 2vh;
+    padding-inline-start: 5vw;
+}
+
+.first_name {
+    padding-inline-start: 0;
+    padding-inline-end: 10vw;
+}
+
+form h5 {
+    font-size: 3.5vh;
+    color: var(--lightBlue-color);
+    font-family: "Courgette";
+}
+
+form label {
+    color: white;
+    font-family: "Courgette";
+}
+
+form input {
+    outline: none;
+    background-color: transparent;
+    border: solid #00c2cb;
+    padding-block: 1vh;
+    padding-inline: 3vh;
+    color: #00c2cb;
+    border-radius: 5px;
+    font-size: 3vh;
+}
+
+.phone_number {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    padding-inline-start: 0;
+}
+
+select {
+    outline: none;
+    background-color: transparent;
+    border: solid #00c2cb;
+    padding-block: 1vh;
+    padding-inline: 3vh;
+    color: #00c2cb;
+    border-radius: 5px;
+    font-size: 3vh;
+}
+
+option {
+    background-color: #011627;
+}
+
+form button {
+    border: solid var(--blue-color);
+    padding-block: 2vh;
+    padding-inline: 3vh;
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--blue-color);
+    font-size: 3.5vh;
+    font: bold;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: row;
+    gap: 2vh;
+}
+
+form button:hover {
+    border: solid #00c2cb;
+    box-shadow: 0px 0px 10px #00c2cb, 0px 0px 20px #00c2cb;
+    background-color: #00c2cb;
+    color: #011627;
+}
+
+form textarea {
+    resize: none;
+    border: solid #00c2cb;
+    outline: none;
+    background-color: transparent;
+    color: #00c2cb;
+    padding-block: 1vh;
+    padding-inline: 3vh;
+    width: 70%;
+    border-radius: 5px;
+    font-size: 3vh;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    padding-inline: 0;
+    gap: 6vw;
+}
+
+main hr {
+    width: 100%;
+    border: solid #00c2cb;
+    box-shadow: 0px 0px 10px #00c2cb, 0px 0px 20px #00c2cb;
+    transform: perspective(10px) rotateX(0deg) scale(0.5, 0.2);
+    filter: blur(0.6em);
+    margin: 2vh;
+}
+
+/*Services receipt*/
+#servicesReceipt h2 {
+    text-align: left;
+    font-size: 10vh;
+    width: 40vw;
+    color: var(--light-color);
+    text-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+}
+
+#servicesReceipt {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: start;
+    width: 100%;
+    align-items: center;
+    background-color: transparent;
+}
+
+#servicesReceipt img {
+    width: 40vw;
+    margin-inline-end: 5vw;
+}
+
+#servicesReceip hr {
+    place-self: start;
+}
+
+#servicesReceipt p {
+    color: white;
+    font-size: 3vh;
+    width: 40vw;
+}
+
+#servicesReceipt aside {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    padding-inline-start: 5vw;
+    align-items: start;
+    padding-block: 10vh;
+}
+
+#servicesReceipt button {
+    border: solid var(--blue-color);
+    padding-block: 1vh;
+    padding-inline: 3vh;
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--blue-color);
+    font-size: 4vh;
+    font: bold;
+    transition: all 0.3s;
+}
+
+#servicesReceipt button:hover {
+    border: solid #00c2cb;
+    box-shadow: 0px 0px 10px #00c2cb, 0px 0px 20px #00c2cb;
+    background-color: #00c2cb;
+    color: #011627;
+}
+
+#networkServices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 10vh;
+    gap: 10vh;
+}
+#networkServices aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    padding-block: 10vh;
+    box-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+    border-radius: 30px;
+    padding: 3vh;
+    padding-block: 5vh;
+    width: 25%;
+    text-align: center;
+    transition: all 0.3s;
+    position: static;
+    top: 0;
+}
+#networkServices aside:hover{
+    position: relative;
+    top: -2vh;
+}
+
+#networkServices h3{
+    font-family: var(--title-font);
+    font-size: 1.5vw;
+    color: var(--light-color);
+    text-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+}
+#networkServices section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#networkServices img{
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#serverServices{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 10vh;
+    gap: 10vh;
+
+    width: 100%;
+}
+#serverServices img{
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#serverServices aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    padding-block: 10vh;
+    box-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+    border-radius: 30px;
+    padding: 3vh;
+    padding-block: 5vh;
+    width: 25%;
+    text-align: center;
+    transition: all 0.3s;
+    position: static;
+    top: 0;
+}
+#serverServices aside:hover{
+    position: relative;
+    top: -2vh;
+}
+
+#serverServices h3{
+    font-family: var(--title-font);
+    font-size: 1.5vw;
+    color: var(--light-color);
+    text-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+}
+#serverServices section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#serverServices img{
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+#itSupport{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 10vh;
+    gap: 10vh;
+    width: 100%;
+}
+#itSupport img{
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#itSupport aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    padding-block: 10vh;
+    box-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+    border-radius: 30px;
+    padding: 3vh;
+    padding-block: 5vh;
+    width: 25%;
+    text-align: center;
+    transition: all 0.3s;
+    position: static;
+    top: 0;
+}
+#itSupport aside:hover{
+    position: relative;
+    top: -2vh;
+}
+
+#itSupport h3{
+    font-family: var(--title-font);
+    font-size: 1.5vw;
+    color: var(--light-color);
+    text-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+}
+#itSupport section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+#itSupport img{
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+
+#telecom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 10vh;
+    gap: 10vh;
+    width: 100%;
+}
+#telecom img{
+    height: 10vw;
+    object-fit: cover;
+    border-radius: 20px;
+}
+#telecom section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 5vh;
+}
+#telecom aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5vh;
+    padding-block: 10vh;
+    box-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+    border-radius: 30px;
+    padding: 3vh;
+    padding-block: 5vh;
+    width: 25%;
+    text-align: center;
+    transition: all 0.3s;
+    position: static;
+    top: 0;   
+}
+#telecom h3{
+    font-family: var(--title-font);
+    font-size: 1.5vw;
+    color: var(--light-color);
+    text-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+}
+#telecom aside:hover{
+    position: relative;
+    top: -2vh;
+}
+#voiceSolution{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 10vw;
+    padding-block: 10vh;
+}
+#voiceSolution h3{
+    font-family: var(--title-font);
+    font-size: 3.5vw;
+    color: var(--light-color);
+    text-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+}
+#voiceSolution img{
+    width: 20vw;
+}
+#voiceSolution section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10vw;
+    color: white;
+}
+#business{
+    display: flex;
+    flex-direction: column;
+    padding-block: 10vh;
+    padding-inline: 2vw;
+    gap: 10vh;
+    align-items: center;
+}
+#business section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 5vh;
+}
+#business ul{
+    color: white;
+}
+#business h3{
+    text-align: center;
+    font-family: var(--title-font);
+    font-size: 2vw;
+    color: var(--light-color);
+    text-shadow: 0px 0px 10px var(--light-color), 0px 0px 20px var(--light-color);
+}
+#business aside{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
