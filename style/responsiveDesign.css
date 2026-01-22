@@ -1,0 +1,176 @@
+/*Importations*/
+/*Italianno*/
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+/*Courgette*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+/*Nunito*/
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+/*Configuration de base*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--paragraphs-font);
+}
+
+:root {
+    /*couleurs*/
+    --primary-color: #011627;
+    /*Couleur de la navbar et des divs*/
+    --light-color: #00c2cb;
+    /*Couleur utilisee pour les effets de lumiere*/
+    --background-color: #010B19;
+    /*Couleur de fond*/
+    --blue-color: #52cdfe;
+
+    /*Police*/
+    --title-font: Courgette;
+    /*Police pour les titres dans main*/
+    --paragraphs-font: Nunito;
+    /*Police pour les textes de paragraphe*/
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        width: 412px;
+    }
+
+    header {
+        padding-block: 1vh;
+    }
+
+    header h2 {
+        display: none;
+    }
+
+    header img {
+        width: 10vw;
+    }
+
+    header ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header h3 {
+        font-size: 3.5vw;
+    }
+
+    h1 {
+        font-size: 8vw;
+    }
+
+    main h2 {
+        font-size: 6vw;
+    }
+
+    main p {
+        font-size: 4.5vw;
+    }
+
+    h1::before {
+        transform: perspective(10px) rotateX(0deg) scale(0.5, 0.08);
+        filter: blur(0.6em);
+    }
+
+    .video-bg {
+        display: none;
+    }
+
+    .obscuringVeil {
+        background-color: var(--background-color);
+    }
+
+    #receipt {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+        text-align: center;
+    }
+
+    #receipt p {
+        place-self: center;
+        font-size: 5vw;
+        width: 100%;
+    }
+
+    #receipt section button {
+        font-size: 4vw;
+        padding: 1vh;
+    }
+
+    #receipt::after {
+        background: none;
+    }
+
+    #whoAreWe {
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: none;
+    }
+
+    #whoAreWe img {
+        display: none;
+    }
+
+    #whoAreWe p {
+        text-indent: 0;
+        line-height: 10vw;
+        width: 90%;
+        text-align: center;
+    }
+
+    #whyUs section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2vh;
+    }
+    #whyUs article{
+        width: 90%;
+        gap: 1vh;
+    }
+    #whyUs h3{
+        font-size: 5vw;
+        gap: 2vw;
+    }
+    #whyUs i{
+        font-size: 5vw;
+    }
+
+    #partners img{
+        width: 15vw;
+        object-fit: contain;
+    }
+    #partners section{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    footer{
+        gap: 0;
+        padding: 0;
+    }
+    footer h4 {
+        font-size: 5vw;
+    }
+
+    footer section {
+        display: flex;
+        flex-direction: column;
+        gap: 1vh;
+        padding: 0;
+        padding-block: 5vw;
+        padding-inline: 5vw;
+    }
+
+    footer div {
+        gap: 0;
+    }
+}
