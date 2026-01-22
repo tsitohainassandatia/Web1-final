@@ -9,119 +9,100 @@
     <title>BLIT Contact</title>
 </head>
 
-<body>
+<body class="body-form">
 
-    <header>
-        <div>
-            <img src="./assets/logo2-removebg-preview.png" alt="">
-            <h2>Be Loyal <span>IT</span></h2>
-        </div>
-        <nav>
-            <ul>
-                <li>
-                    <a href="home.html">
-                        <h3>Home</h3>
-                        <hr>
-                    </a>
-                </li>
-                <li>
-                    <a href="services.html">
-                        <h3>Our services</h3>
-                        <hr>
-                    </a>
-                </li>
-                <li>
-                    <a href="requireServices.html" class="active">
-                        <h3>Contact us</h3>
-                        <hr>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <div class="obscuringVeil-contact">
+        <header>
+            <div>
+                <img src="./assets/logo2-removebg-preview.png" alt="">
+                <h2>Be Loyal <span>IT</span></h2>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="home.html">
+                            <h3>Home</h3>
+                            <hr>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="services.html">
+                            <h3>Our services</h3>
+                            <hr>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="requireServices.html" class="active">
+                            <h3>Contact us</h3>
+                            <hr>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <form action="">
-            <section>
-                <h2>What can we do for you?</h2>
-                <h5>Information request or Leave us a message</h5>
-            </section>
-            <hr>
-            <section class="nom_prenom">
-                <div>
-                    <label for="">Name:</label>
-                    <input type="text" name="" id="">
-                </div>
-                <div class="first_name">
-                    <label for="">First name:</label>
-                    <input type="text" name="" id="">
-                </div>
-            </section>
-            <section>
-                <div>
-                    <label for="">Phone number:</label>
-                    <div class="phone_number">
-                        <select name="" id="">
-                            <option value="">+261</option>
-                            <option value="">+33</option>
-                            <option value="">+44</option>
-                            <option value="">+1</option>
-                        </select>
-                        <input type="tel" name="" id="">
+        <main class="main-form">
+            <video autoplay muted loop playsinline poster="image-de-secours.jpg" class="video-bg-contact">
+                <source src="./assets/video_bg2.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <form action="">
+                <section>
+                    <h4>Contact information</h4>
+                    <div class="info">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-envelope"></i>
+                                contact@beloyalit.com
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                +261 33 82 044 88
+                            </li>
+                        </ul>
                     </div>
-                </div>
-            </section>
-            <section>
-                <div>
-                    <label for="">Email:</label>
-                    <input type="text" name="" id="">
-                </div>
-            </section>
-            <section>
-                <div>
-                    <label for="">Comment:</label>
-                    <textarea name="" id="" rows="10"></textarea>
-                </div>
-            </section>
-            <hr>
-            <div class="buttons">
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Submit</button>
-                <button type="reset"><i class="fa-solid fa-rotate"></i> Reset</button>
-            </div>
-        </form>
-    </main>
-
-    <footer>
-        <section>
-            <div>
-                <h4>Address:</h4>
-                <a href="">
-                    <p>
-                        Lot III P 20 Ge Marohoho Tsimbazaza
-                        <br>
-                        Antananarivo 101
-                        <br>
-                        MADAGASCAR
-                    </p>
-                </a>
-            </div>
-            <div>
-                <h4>Phone:</h4>
-                <a href="">
-                    <p>+261 33 82 044 88</p>
-                </a>
-            </div>
-            <div>
-                <h4>Email:</h4>
-                <a href="">
-                    <p>contact@beloyalit.com</p>
-                </a>
-            </div>
-        </section>
-        <section class="signature">
-            <p>Designed by <a href="">Tsitohaina Sandatia</a></p>
-        </section>
-    </footer>
+                    <div class="parent">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="fa-brands fa-linkedin"></i>
+                    </div>
+                </section>
+                <section>
+                    <div class="parent">
+                        <div>
+                            <label for="">First name</label>
+                            <input type="text">
+                        </div>
+                        <div>
+                            <label for="">Name</label>
+                            <input type="text" id="name">
+                        </div>
+                    </div>
+                    <div class="email">
+                        <label for="">Email</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="">Phone Number</label>
+                        <aside>
+                            <select name="" id="">
+                                <option value="">+261</option>
+                                <option value="">+1</option>
+                                <option value="">+66</option>
+                                <option value="">+99</option>
+                            </select>
+                            <input type="text">
+                        </aside>
+                    </div>
+                    <div class="message">
+                        <label for="">Write message</label>
+                        <textarea name="" id="" rows="5"></textarea>
+                    </div>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                </section>
+            </form>
+        </main>
+    </div>
 </body>
 
 </html>
